@@ -1,0 +1,231 @@
+/* Main container styles */
+.projects-container {
+    background-color: #FFB8E0; /* Pink background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  
+  .projects-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'CustomFont', serif;
+  }
+  
+  /* Grid container styles */
+  .projects-grid-container {
+    background-color: #EC7FA9; /* Slightly darker pink */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(236, 127, 169, 0.7);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Responsive grid adjustments */
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Project card styles */
+  .project-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid #FFEDFA;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .project-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-image-container {
+    width: 100%;
+    height: 150px; /* Fixed height for image container */
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image cover the container */
+    object-position: center;
+  }
+  
+  .project-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    font-family: 'CustomFont', serif;
+    color: black
+  }
+  
+  .project-description {
+    color: #000000;
+    font-family: 'CustomFont', serif;
+    margin-top: auto;
+  }
+  
+  .project-footer {
+    border-top: 1px solid #FFEDFA;
+    padding: 1rem;
+    text-align: right;
+    margin-top: auto;
+  }
+  
+  .view-project-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 0.875rem;
+    cursor: pointer;
+    font-family: 'CustomFont', serif;
+  }
+  
+  .view-project-button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Modal styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  .modal-content {
+    background-color: #FFEDFA;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .modal-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #FFEDFA;
+    z-index: 10;
+  }
+  
+  .modal-header h2 {
+    font-family: 'CustomFont', serif;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #000000;
+  }
+  
+  .modal-close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    color: #000000;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .modal-image-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .modal-image-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .modal-image-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .gallery-image-container {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0.25rem;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .modal-description {
+    background-color: #FFEDFA;
+    padding: 1.25rem;
+    border-radius: 0.25rem;
+  }
+  
+  .modal-description h3 {
+    font-family: 'CustomFont', serif;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #000000;
+  }
+  
+  .modal-description p {
+    font-family: 'CustomFont', serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #000000;
+  }
+  
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/font/MotenaGolden-Reguler.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

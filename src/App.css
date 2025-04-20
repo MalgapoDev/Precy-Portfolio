@@ -1,0 +1,16 @@
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  width: 100%;
+  /* Set an appropriate height or min-height here */
+}
+
+.about-section {
+  width: 100%;
+}
