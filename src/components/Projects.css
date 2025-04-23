@@ -17,12 +17,12 @@
   
   /* Grid container styles */
   .projects-grid-container {
-    background-color: #EC7FA9; /* Slightly darker pink */
-    border-radius: 0.5rem;
+    border-radius: 20px;
     padding: 1.5rem;
     width: 100%;
     max-width: 1200px;
     box-shadow: 0 4px 8px rgba(236, 127, 169, 0.7);
+    border: 3px solid #FFEEF6;
   }
   
   .projects-grid {

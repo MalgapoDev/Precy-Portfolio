@@ -19,12 +19,12 @@ const Hero = ({ aboutRef }) => {
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          highlightColor: 0xfb53fc,
-          midtoneColor: 0xf9bcf9,
-          lowlightColor: 0xff52ff,
+          highlightColor: 0xfc92fc,
+          midtoneColor: 0xffc0ff,
+          lowlightColor: 0xffc3ff,
           baseColor: 0xffebeb,
           blurFactor: 0.6,
-          speed: 1.0,
+          speed: 2.5,
           zoom: 1.0,
         })
       );

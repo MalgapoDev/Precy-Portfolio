@@ -1,287 +1,206 @@
 .about-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: #FFB8E0;
-    color: #FFEDFA;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #FFB8E0;
+  color: #FFEDFA;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: rgb(0, 0, 0);
+  font-family: 'CustomFont', serif;
+}
+
+.about-summary {
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(236, 127, 169, 0.7);
+  border: 3px solid #FFEEF6;
+}
+
+.about-summary p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000000;
+  font-family: 'CustomFont', serif;
+}
+
+.about-details-container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000000;
+  font-family: 'CustomFont', serif;
+}
+
+/* Technical Skills Section with Horizontal Scroll */
+.technical-skills-section {
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(236, 127, 169, 0.7);
+  margin-bottom: 40px;
+  border: 3px solid #FFEEF6;
+}
+
+.skills-scroll-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.skills-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  gap: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #FFEDFA #FFB8E0;
+}
+
+.skills-scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-scroll-wrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.skills-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #FFEDFA;
+  border-radius: 10px;
+}
+
+.skill-card {
+  flex: 0 0 300px;
+  background-color: #FFEDFA;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-card h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #000000;
+  font-family: 'CustomFont', serif;
+}
+
+.skill-description {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'CustomFont', serif;
+}
+
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+  color: #070707;
+  font-family: 'CustomFont', serif;
+}
+
+.arrow-icon {
+  animation: bounceX 1.5s infinite;
+}
+
+@keyframes bounceX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-summary, .about-details-container, .technical-skills-section {
+    width: 90%;
   }
   
+  .skill-card {
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-summary, .about-details-container, .technical-skills-section {
+    width: 95%;
+  }
+  
+  .skill-card {
+    flex: 0 0 260px;
+  }
+}
+
+@media (max-width: 480px) {
   .about-title {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: rgb(0, 0, 0);
-    font-family: 'CustomFont', serif;
-  }
-  
-  .about-summary {
-    width: 80%;
-    max-width: 1200px;
-    background-color: #EC7FA9;
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(236, 127, 169, 0.7);
-  }
-  
-  .about-summary p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #000000;
-    font-family: 'CustomFont', serif;
-  }
-  
-  .about-details-container {
-    display: flex;
-    width: 80%;
-    max-width: 1200px;
-    gap: 30px;
-  }
-  
-  .about-education {
-    flex: 0 0 35%;
-    background-color: #EC7FA9;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(236, 127, 169, 0.7);
+    font-size: 2rem;
   }
   
   .section-title {
-    display: flex;
-    align-items: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #FFEDFA;
-    font-family: 'CustomFont', serif;
+    font-size: 1.5rem;
   }
   
-  .education-icon, .certificate-icon {
-    margin-right: 15px;
-    font-size: 20px;
-  }
-  
-  /* Timeline styling */
-  .timeline {
-    position: relative;
-    padding-left: 30px;
-    margin-top: 30px;
-  }
-  
-  .timeline:before {
-    content: '';
-    position: absolute;
-    left: 7px;
-    top: 5px;
-    bottom: 0;
-    width: 2px;
-    background-color: #4a4a4a;
-  }
-  
-  .timeline-item {
-    position: relative;
-    margin-bottom: 30px;
-  }
-  
-  .timeline-dot {
-    position: absolute;
-    left: -30px;
-    top: 5px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #FFEDFA;
-    border: 2px solid #2a2a2a;
-    z-index: 1;
-  }
-  
-  .timeline-content {
-    position: relative;
-  }
-  
-  .timeline-content h4 {
-    font-size: 18px;
-    margin-bottom: 3px;
-    color: #000000;
-    font-family: 'CustomFont', serif;
-  }
-  
-  .degree {
-    color: #000000;
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-family: 'CustomFont', serif;
-  }
-  
-  .year {
-    color: #000000;
-    font-size: 16px;
-    font-family: 'CustomFont', serif;
-  }
-  
-  .about-awards {
-    flex: 1;
-    background-color: #EC7FA9;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(236, 127, 169, 0.7);
-  }
-  
-  /* Carousel styling */
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    margin-top: 20px;
-  }
-  
-  .carousel-slides {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-slide {
-    min-width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-  }
-  
-  .award-card {
-    background-color: #FFEDFA;
-    border-radius: 10px;
+  .skill-card {
+    flex: 0 0 240px;
     padding: 20px;
-    position: relative;
-    overflow: hidden;
-    width: calc(100% - 10px);
-    height: calc(100% - 60px);
-    margin: 0 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
   }
   
-  .award-card:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right top;
-    opacity: 0.2;
-    transform: scale(3);
+  .skill-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
   }
-  
-  .award-card h4 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #000000;
-    font-family: 'CustomFont', serif;
-  }
-  
-  .certificate-details {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-  
-  .institution {
-    color: #000000;
-    font-size: 16px;
-    font-family: 'CustomFont', serif;
-  }
-  
-  .description {
-    color: #000000;
-    font-size: 16px;
-    line-height: 1.5;
-    flex-grow: 1;
-    font-family: 'CustomFont', serif;
-  }
-  
-  .carousel-controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .carousel-control {
-    background-color: rgba(2365, 127, 169, 0.7);
-    color: #FFEDFA;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    margin: 0 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .carousel-control:hover {
-    background-color: rgba(2365, 127, 169, 0.7);
-  }
-  
-  .carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin: 0 10px;
-  }
-  
-  .carousel-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .carousel-indicator.active {
-    background-color: #FFEDFA;
-    transform: scale(1.2);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .about-details-container {
-      flex-direction: column;
-    }
-    
-    .about-education, .about-awards {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .about-summary, .about-details-container {
-      width: 95%;
-    }
-    
-    .carousel-container {
-      height: 350px;
-    }
-  }
-  
-  @font-face {
-    font-family: 'CustomFont';
-    src: url('../assets/font/MotenaGolden-Reguler.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../assets/font/MotenaGolden-Reguler.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

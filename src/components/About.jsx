@@ -2,52 +2,38 @@ import React, { useState, useEffect, useCallback } from "react";
 import "./About.css";
 
 const About = React.forwardRef((props, ref) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const awards = [
+  const skills = [
     {
-      title: "NCII Passer Certificate",
-      institution: "Nambalan National High School",
-      year: "2020",
-      description: "description."
+      title: "Structural Design",
+      icon: "🏗️",
+      description: "Experience in designing and analyzing structural components for civil engineering projects with focus on stability and safety."
     },
     {
-      title: "Basic Carpentry",
-      institution: "Valenzuela City Technological College",
-      year: "year",
-      description: "description"
+      title: "CAD Drafting",
+      icon: "📐",
+      description: "Proficient in creating detailed technical drawings and plans using industry-standard CAD software."
     },
     {
-      title: "Certificate Title",
-      institution: "institution",
-      year: "year",
-      description: "description"
+      title: "Surveying",
+      icon: "🔭",
+      description: "Skilled in land surveying techniques and equipment for precise site measurement and analysis."
     },
     {
-      title: "Certificate Title",
-      institution: "institution",
-      year: "year",
-      description: "description"
+      title: "Material Testing",
+      icon: "🧪",
+      description: "Knowledge of testing procedures for construction materials to ensure quality and compliance with standards."
+    },
+    {
+      title: "Project Management",
+      icon: "📋",
+      description: "Ability to coordinate construction activities, schedules, and resources effectively."
+    },
+    {
+      title: "Sustainability Practices",
+      icon: "♻️",
+      description: "Understanding of environmentally friendly construction methods and materials for sustainable development."
     }
   ];
-
-  // Wrap nextSlide in useCallback to prevent recreating on each render
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prevSlide) => 
-      prevSlide === awards.length - 1 ? 0 : prevSlide + 1
-    );
-  }, [awards.length]);
-
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prevSlide) => 
-      prevSlide === 0 ? awards.length - 1 : prevSlide - 1
-    );
-  }, [awards.length]);
-
-  // Auto-advance carousel
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, [nextSlide]);
 
   return (
     <div ref={ref} className="about-container">
@@ -57,85 +43,26 @@ const About = React.forwardRef((props, ref) => {
         <p>I am a detail-oriented Civil Technology professional with expertise in construction methods, structural design, and project management. Skilled in drafting, surveying, and material testing, I collaborate with engineers and contractors to deliver high-quality, sustainable projects. Passionate about innovation and committed to excellence in the built environment.</p>
       </div>
       
-      <div className="about-details-container">
-        <div className="about-education">
-          <h3 className="section-title">
-            <i className="education-icon">📋</i> Educational Background
-          </h3>
-          
-          <div className="timeline">
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h4>Valenzuela City Technological College</h4>
-                <p className="degree">Civil Technology</p>
-                <p className="year">2021 - Present</p>
-              </div>
-            </div>
-            
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h4>Nambalan National High School</h4>
-                <p className="degree">General Academic Strand (GAS)</p>
-                <p className="year">2018 - 2020</p>
-              </div>
-            </div>
-            
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h4>Nambalan National High School</h4>
-                <p className="degree">Junior High School</p>
-                <p className="year">2014 - 2018</p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h4>Pugo Cecilio Elementary School</h4>
-                <p className="degree">Junior High School</p>
-                <p className="year">2008 - 2014</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="technical-skills-section">
+        <h3 className="section-title">
+          <i className="skills-icon">🎯</i> Technical Skills
+        </h3>
         
-        <div className="about-awards">
-          <h3 className="section-title">
-            <i className="certificate-icon">✨</i> Awards/Certificates
-          </h3>
-          
-          <div className="carousel-container">
-            <div className="carousel-slides" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-              {awards.map((award, index) => (
-                <div className="award-card carousel-slide" key={index}>
-                  <h4>{award.title}</h4>
-                  <div className="certificate-details">
-                    <p className="institution">{award.institution}</p>
-                    <p className="year">{award.year}</p>
-                  </div>
-                  <p className="description">
-                    {award.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-            
-            <div className="carousel-controls">
-              <button className="carousel-control prev" onClick={prevSlide}>❮</button>
-              <div className="carousel-indicators">
-                {awards.map((_, index) => (
-                  <button 
-                    key={index} 
-                    className={`carousel-indicator ${index === currentSlide ? 'active' : ''}`}
-                    onClick={() => setCurrentSlide(index)}
-                  ></button>
-                ))}
+        <div className="skills-scroll-container">
+          <div className="skills-scroll-wrapper">
+            {skills.map((skill, index) => (
+              <div className="skill-card" key={index}>
+                <div className="skill-icon">{skill.icon}</div>
+                <h4>{skill.title}</h4>
+                <p className="skill-description">
+                  {skill.description}
+                </p>
               </div>
-              <button className="carousel-control next" onClick={nextSlide}>❯</button>
-            </div>
+            ))}
+          </div>
+          <div className="scroll-indicator">
+            <span>Scroll to see more</span>
+            <i className="arrow-icon">→</i>
           </div>
         </div>
       </div>
