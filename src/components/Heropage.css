@@ -91,7 +91,7 @@ html, body {
 
 .scroll-down {
   position: absolute;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
