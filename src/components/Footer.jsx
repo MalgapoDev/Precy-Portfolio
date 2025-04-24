@@ -16,11 +16,11 @@ function Footer() {
                     <h4>Contact</h4>
                     <ul className="contact-list">
                         <li>
-                            <i className="footer-icon email-icon"></i>
+                            <i className="footer-icon email-icon">✉️</i>
                             <a href="malgapomichaelmarc@gmail.com">precyelebado@gmail.com</a>
                         </li>
                         <li>
-                            <i className="footer-icon phone-icon"></i>
+                            <i className="footer-icon phone-icon">📞</i>
                             <a href="tel:+639100000000">+63 910 000 0000</a>
                         </li>
                     </ul>

@@ -1,7 +1,7 @@
 /* Navigation.css */
 .navbar {
   width: 100%;
-  background-color: #4a5568;
+  background-color: #ffabdc;
   color: white;
   position: fixed;
   top: 0;
@@ -29,10 +29,11 @@
 }
 
 .logo {
-  color: #f8a5c2;
+  color: #ff2470;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
+  font-family: Tahoma;
   cursor: pointer;
 }
 
@@ -50,7 +51,7 @@
   color: white;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: color 0.2s ease;
 }
 
