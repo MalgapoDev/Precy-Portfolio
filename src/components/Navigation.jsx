@@ -35,9 +35,6 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-content">
-          <div className="navbar-logo">
-            <span onClick={() => scrollToSection('hero')} className="logo">PIE</span>
-          </div>
           
           {!isMobile && (
             <div className="desktop-menu">

@@ -18,23 +18,10 @@
 
 .navbar-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 64px;
   padding: 0 16px;
-}
-
-.navbar-logo {
-  flex-shrink: 0;
-}
-
-.logo {
-  color: #ff2470;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
-  font-family: Tahoma;
-  cursor: pointer;
 }
 
 .desktop-menu {
@@ -44,7 +31,7 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 50px;
 }
 
 .nav-link {
