@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import Navigation from './components/Navigation.jsx';
 import Hero from "./components/Heropage.jsx";
 import About from "./components/About.jsx";
 import ProjectsPage from "./components/Projects.jsx";
@@ -9,17 +10,20 @@ function App() {
   
   return (
     <div className="app-container">
-      <section className="hero-section">
+      <Navigation />
+      <section id="hero" className="hero-section">
         <Hero aboutRef={aboutRef} />
       </section>
       
-      <section className="about-section" ref={aboutRef}>
+      <section id="about" className="about-section" ref={aboutRef}>
         <About />
       </section>
-      <section className="projects-section">
+      <section id="projects" className="projects-section">
         <ProjectsPage />
       </section>
-      <Footer />
+      <section id="contacts" className="footer-section">
+        <Footer />
+      </section>
     </div>
   )
 }
